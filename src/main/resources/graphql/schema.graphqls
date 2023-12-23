@@ -1,0 +1,14 @@
+type Query {
+    getAllEmployees: [Employee]
+}
+
+type Employee {
+    id: ID!
+    name: String
+    salary: String
+}
+
+type Department {
+    name: String
+}
+
