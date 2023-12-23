@@ -2,13 +2,29 @@ type Query {
     getAllEmployees: [Employee]
 }
 
+type Mutation {
+    addEmployee(employee: EmployeeInput): Employee
+}
+
+input EmployeeInput {
+    name: String
+    salary: String
+    department: DepartmentInput
+}
+
+input DepartmentInput{
+    id:ID!
+}
+
 type Employee {
     id: ID!
     name: String
     salary: String
+    department: Department
 }
 
 type Department {
+    id:ID!
     name: String
 }
 
